@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,11 +17,11 @@ namespace Restauracja.Models
         public List<Zamowienie_PozycjaZamowienia> Zamowienie_PozycjaZamowienias { get; set; }
 
         public int IdPracownika { get; set; }
-
+        [ForeignKey("IdPracownika")]
         public Pracownik Pracownik { get; set; }
 
         public int KlientId { get; set; }
-
+        [ForeignKey("KlientId")]
         public Klient Klient {get; set;}
 
     }
