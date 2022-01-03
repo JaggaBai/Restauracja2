@@ -12,6 +12,6 @@ namespace Restauracja.Models
         public int KlientId { get; set; }
         public int NumerStolika { get; set; }
 
-        public List<Zamownie> Zamowienia { get; set; }
+        public List<Zamownie> Zamownies { get; set; }
     }
 }
