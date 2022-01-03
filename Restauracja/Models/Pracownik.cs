@@ -13,5 +13,7 @@ namespace Restauracja.Models
         public string ImiePracownika { get; set; }
 
         public string NazwiskoPracownika { get; set; }
+
+        public List<Zamownie> Zamowienia { get; set; }
     }
 }

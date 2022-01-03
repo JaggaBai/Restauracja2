@@ -1,6 +1,7 @@
 ﻿using Restauracja.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +9,8 @@ namespace Restauracja.Models
 {
     public class PozycjaZamowienia
     {
-        public int Id { get; set; }
+        [Key]
+        public int IdPozycji { get; set; }
         public string Zdjecie { get; set; }
         public string Nazwa { get; set; }
         public KategoriaPozycji KategoriaPozycji { get; set; }
