@@ -16,10 +16,6 @@ namespace Restauracja.Models
 
         public List<Zamowienie_PozycjaZamowienia> Zamowienie_PozycjaZamowienias { get; set; }
 
-        public int IdPracownika { get; set; }
-        [ForeignKey("IdPracownika")]
-        public Pracownik Pracownik { get; set; }
-
         public int KlientId { get; set; }
         [ForeignKey("KlientId")]
         public Klient Klient {get; set;}

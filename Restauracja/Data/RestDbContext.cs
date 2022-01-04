@@ -28,11 +28,11 @@ namespace Restauracja.Data
 
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Zamownie> Zamownies { get; set; }
-        public DbSet<Pracownik> Pracownicy { get; set; }
+        public DbSet<Zamownie> Zamownia { get; set; }
+       
         public DbSet<Klient> Klienci { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
-        public DbSet<Zamowienie_PozycjaZamowienia> Zamowienie_PozycjaZamowienias { get; set; }
+        public DbSet<Zamowienie_PozycjaZamowienia> Zamowienie_PozycjaZamowienia { get; set; }
 
 
     }
