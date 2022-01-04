@@ -26,28 +26,58 @@ namespace Restauracja.Data
                         new Klient()
                         {
                             NumerStolika = 4
-                        };
+                        },
 
                     new Klient()
                     {
                         NumerStolika = 3
-                    };
+                    },
                     new Klient()
 
                     {
                         NumerStolika = 10
-                    };
+                    },
+                    });
+                    context.SaveChanges();
                 }
 
 
                 //PozycjaZamowienia
-                if (!context.PozycjeZamowienia.Any()) { }
+                if (!context.PozycjeZamowienia.Any()) {
+                    context.PozycjeZamowienia.AddRange(new List<PozycjaZamowienia>()
+                    {
+                        new PozycjaZamowienia()
+                        {
+                        Zdjecie = @"C:\Users\User\source\repos\Restauracja\Restauracja\Data\ZdjeciaLink\casey-lee-awj7sRviVXo-unsplash.jpg",//Casey Lee
+                        Nazwa = "Łosoś",
+                        KategoriaPozycji=KategoriaPozycji.DanieGlowne,
+                        Cena = 15.15,
+                        },
 
+                    new PozycjaZamowienia()
+                    {
+                        Zdjecie = @"C:\Users\User\source\repos\Restauracja\Restauracja\Data\ZdjeciaLink\anna-pelzer-IGfIGP5ONV0-unsplash.jpg", //  Anna Pelzer,
+                        Nazwa = "Sałatka",
+                        KategoriaPozycji = KategoriaPozycji.DanieGlowne
+                        Cena = 30.00,
+                    },
+                     new PozycjaZamowienia()
+                    {
+                        Zdjecie = @"C:\Users\User\source\repos\Restauracja\Restauracja\Data\ZdjeciaLink\anna-pelzer-IGfIGP5ONV0-unsplash.jpg", //  Anna Pelzer,
+                        Nazwa = "Sałatka",
+                        KategoriaPozycji = KategoriaPozycji.DanieGlowne
+                        Cena = 30.00,
+                    }, 
+                    });
+                    context.SaveChanges();
+                }
+             
                 //
                 if (!context.Zamowienie_PozycjaZamowienia.Any()) { }
 
                 if (!context.Zamownia.Any()) { }
             }
+        
 
             }
                 }
