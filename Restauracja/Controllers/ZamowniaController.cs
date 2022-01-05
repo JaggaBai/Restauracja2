@@ -18,7 +18,7 @@ namespace Restauracja.Controllers //Zastosowanie asynchronous tasks->async do za
         public async Task<IActionResult> Index()
         {
             var data = _context.Zamownia.ToListAsync();
-            return View();
+            return View(data);
         }
     }
 }

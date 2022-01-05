@@ -12,10 +12,14 @@ namespace Restauracja.Models
     {
         [Key]
         public int IdPozycji { get; set; }
-        public string Zdjecie { get; set; }
+
+        [Display(Name = "Nazwa")]
         public string Nazwa { get; set; }
+
+        [Display(Name = "Kategoria")]
         public KategoriaPozycji KategoriaPozycji { get; set; }
-        
+
+        [Display(Name = "Cena")]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Cena { get; set; }
 

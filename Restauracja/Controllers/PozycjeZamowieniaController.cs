@@ -17,8 +17,8 @@ namespace Restauracja.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _context.PozycjeZamowienia.ToListAsync();
-            return View();
+            var pz = await _context.PozycjeZamowienia.ToListAsync();
+            return View(pz);
         }
     }
 }

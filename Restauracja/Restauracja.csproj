@@ -5,10 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\ZdjeciaLink\**" />
+    <Content Remove="Data\ZdjeciaLink\**" />
+    <EmbeddedResource Remove="Data\ZdjeciaLink\**" />
+    <None Remove="Data\ZdjeciaLink\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Models\Pracownik.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\foto\" />
   </ItemGroup>
 

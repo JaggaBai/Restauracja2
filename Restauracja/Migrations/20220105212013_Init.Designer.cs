@@ -10,7 +10,7 @@ using Restauracja.Data;
 namespace Restauracja.Migrations
 {
     [DbContext(typeof(RestDbContext))]
-    [Migration("20220105114718_Init")]
+    [Migration("20220105212013_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,9 +50,6 @@ namespace Restauracja.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nazwa")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Zdjecie")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdPozycji");

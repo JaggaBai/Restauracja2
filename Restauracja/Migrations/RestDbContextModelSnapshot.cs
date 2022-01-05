@@ -50,9 +50,6 @@ namespace Restauracja.Migrations
                     b.Property<string>("Nazwa")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Zdjecie")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("IdPozycji");
 
                     b.ToTable("PozycjeZamowienia");

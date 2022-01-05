@@ -8,7 +8,7 @@ namespace Restauracja.Data
     public enum KategoriaPozycji
     {
         Zupa = 1,
-        DanieGlowne,
-        Napoj
+        Danie,
+        Napój
     }
 }

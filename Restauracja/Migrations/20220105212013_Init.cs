@@ -26,7 +26,6 @@ namespace Restauracja.Migrations
                 {
                     IdPozycji = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Zdjecie = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nazwa = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     KategoriaPozycji = table.Column<int>(type: "int", nullable: false),
                     Cena = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
