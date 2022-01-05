@@ -24,22 +24,22 @@ namespace Restauracja.Data
                     context.Klienci.AddRange(new List<Klient>()
                     {
                         new Klient()
-                        {  KlientId=1,
+                        { 
                            NumerStolika = 4
                         },
 
                     new Klient()
-                    {   KlientId =2,
+                    {   
                         NumerStolika = 3
                     },
                     new Klient()
 
-                    {   KlientId =3,
+                    {   
                         NumerStolika = 10
                     },
                      new Klient()
 
-                    {   KlientId=4,
+                    {  
                         NumerStolika = 9
                     },
                     });
@@ -54,6 +54,7 @@ namespace Restauracja.Data
         //                new PozycjaZamowienia()
         //                {
         //                Zdjecie = @"C:\Users\User\source\repos\Restauracja\Restauracja\Data\ZdjeciaLink\casey-lee-awj7sRviVXo-unsplash.jpg",//Casey Lee
+        //                Nazwa = "Łosoś",
         //                Nazwa = "Łosoś",
         //                KategoriaPozycji=KategoriaPozycji.DanieGlowne,
         //                Cena = 15.15M,
@@ -116,32 +117,7 @@ namespace Restauracja.Data
         //        }
 
 
-        //        if (!context.Zamownia.Any()) {
-        //            context.Zamownia.AddRange(new List<Zamownie>()
-        //            {
-        //                new Zamownie()
-        //                {IdZamownie = 3,
-        //DataZamowienia = DateTime.Now,
-        //CenaZamowniena =
-        //KlientId = 1,
-        //        },
-        //        new Zamownie()
-        //        {
-        //            IdZamownie =2,
-        //DataZamowienia = DateTime.Now,
-        //CenaZamowniena =
-        //KlientId = 2,
-        //        }, 
-        //new Zamownie()
-        //    {
-        //        IdZamownie = 2,
-        //        DataZamowienia = DateTime.Now,
-        //CenaZamowniena =
-        //KlientId = 3,
-        //        },
-        //           };
-
-        //            context.SaveChanges();
+   
              
 
             }

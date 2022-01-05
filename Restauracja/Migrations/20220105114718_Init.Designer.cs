@@ -10,7 +10,7 @@ using Restauracja.Data;
 namespace Restauracja.Migrations
 {
     [DbContext(typeof(RestDbContext))]
-    [Migration("20220104095602_Init")]
+    [Migration("20220105114718_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -81,9 +81,6 @@ namespace Restauracja.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<decimal>("CenaZamowniena")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("DataZamowienia")
                         .HasColumnType("datetime2");

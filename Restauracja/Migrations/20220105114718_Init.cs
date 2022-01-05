@@ -43,7 +43,6 @@ namespace Restauracja.Migrations
                     IdZamownie = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DataZamowienia = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CenaZamowniena = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     KlientId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

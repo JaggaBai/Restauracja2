@@ -12,7 +12,6 @@ namespace Restauracja.Models
         [Key]
         public int IdZamownie { get; set; }
         public DateTime DataZamowienia { get; set; }
-        public decimal CenaZamowniena { get; set; }
 
         public List<Zamowienie_PozycjaZamowienia> Zamowienie_PozycjaZamowienias { get; set; }
 

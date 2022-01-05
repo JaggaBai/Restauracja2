@@ -80,9 +80,6 @@ namespace Restauracja.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<decimal>("CenaZamowniena")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<DateTime>("DataZamowienia")
                         .HasColumnType("datetime2");
 

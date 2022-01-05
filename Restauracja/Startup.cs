@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Restauracja.Data;
+using Restauracja.Konfiguracja;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,12 @@ namespace Restauracja
         {
             services.AddDbContext<RestDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));//tu-sem-jest-db
             services.AddControllersWithViews();
+
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1",
+              new OpenApiInfo{ Title = "Restauracja", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +56,13 @@ namespace Restauracja
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            var swaggerOptions = new SwaggerOptions();
+            Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
+            app.UseSwagger(option => { option.RouteTemplate = swaggerOptions.JsonRoute; });
+            app.UseSwaggerUI(option => {
+                option.SwaggerEndpoint(swaggerOptions.UIEndpoint,swaggerOptions.Description);
+            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -55,6 +70,7 @@ namespace Restauracja
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            DbInitializer.Dane1(app);
         }
     }
 }
