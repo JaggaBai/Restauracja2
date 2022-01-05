@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Restauracja.Data;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace Restauracja.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _context.PozycjeZamowienia.ToList();
+            var data = await _context.PozycjeZamowienia.ToListAsync();
             return View();
         }
     }

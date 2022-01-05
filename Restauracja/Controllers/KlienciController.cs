@@ -17,7 +17,7 @@ namespace Restauracja.Controllers
         public IActionResult Index()
         {
             var data = _context.Klienci.ToList();
-            return View();
+            return View(data);
         }
     }
 }

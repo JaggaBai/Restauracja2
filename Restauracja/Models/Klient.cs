@@ -9,7 +9,10 @@ namespace Restauracja.Models
     public class Klient
     {
         [Key]
+        [Display(Name ="Numer Klienta")]
         public int KlientId { get; set; }
+
+        [Display(Name ="Numer Stolika")]
         public int NumerStolika { get; set; }
 
         public List<Zamownie> Zamownies { get; set; }
