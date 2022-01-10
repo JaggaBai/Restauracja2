@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Restauracja.Data;
+using Restauracja.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,14 @@ namespace Restauracja.Controllers
 {
     public class PozycjeZamowieniaController : Controller
     {
-        private readonly RestDbContext _context;
-        public PozycjeZamowieniaController(RestDbContext context)
+        private readonly IPozycjaZamowienia _service;
+        public PozycjeZamowieniaController(IPozycjaZamowienia service)
         {
-            _context = context;
+            _service= service;
         }
         public async Task<IActionResult> Index()
         {
-            var pz = await _context.PozycjeZamowienia.ToListAsync();
+            var pz = await _service.PobierzWszystkie();
             return View(pz);
         }
     }

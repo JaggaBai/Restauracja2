@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Restauracja.Data;
+using Restauracja.Data.Services;
 using Restauracja.Konfiguracja;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,9 @@ namespace Restauracja
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<RestDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));//tu-sem-jest-db
+
+            services.AddScoped<IPozycjaZamowienia, PozycjaZamowienieService>();
+
             services.AddControllersWithViews();
 
             services.AddSwaggerGen(x =>
