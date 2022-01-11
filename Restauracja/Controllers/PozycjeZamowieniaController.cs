@@ -16,10 +16,15 @@ namespace Restauracja.Controllers
         {
             _service= service;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index() 
         {
             var pz = await _service.PobierzWszystkie();
             return View(pz);
+        }
+
+        public IActionResult Dodaj() //get drugi ścieżka pz/Dodaj
+        {
+            return View();
         }
     }
 }
